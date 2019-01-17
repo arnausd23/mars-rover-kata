@@ -1,7 +1,7 @@
 import {Point} from './Point'
 
 describe('Point', () => {
-    let point: Point;
+    let point: Point
 
     beforeEach(() => {
         point = new Point('0:0')

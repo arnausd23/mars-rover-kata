@@ -1,9 +1,9 @@
 import {Rover} from './Rover'
 
 describe('Rover', () => {
-    let rover
+    let rover: Rover
     beforeEach(() => {
-        rover = new Rover('0:0-N')
+        rover = new Rover('0:0-N', '10:10:5:5')
     })
 
     it('Rover to be initialized', () => {

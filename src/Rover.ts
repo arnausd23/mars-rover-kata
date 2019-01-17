@@ -1,26 +1,24 @@
-import {Point} from './Point'
+import { Point } from './Point';
+import { World } from './World';
 
 export class Rover {
-    public point: Point
+    public point: Point;
+    public world: World;
 
-    constructor(point: string) {
+    constructor(point: string, world: string) {
         this.point = new Point(point)
+        this.world = new World(world, point)
     }
 
     public position() {
-        return `${this.point.getX()}:${this.point.getY()}-N`
+        return this.world.position();
     }
 
     public command(command: string) {
         const commands = command.split('')
 
         commands.forEach((singleCommand) => {
-            switch (singleCommand) {
-                case 'f': return this.point.incrementY()
-                case 'b': return this.point.decrementY()
-                case 'r': return this.point.incrementX()
-                case 'l': return this.point.decrementX()
-            }
+            this.world.move(singleCommand);
         })
     }
 }
