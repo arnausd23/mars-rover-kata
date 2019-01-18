@@ -1,9 +1,9 @@
 export class Point {
-    private x: number;
-    private y: number;
+    private x: number
+    private y: number
 
     constructor(point: string) {
-        this.x = Number(point.split(':')[0]);
+        this.x = Number(point.split(':')[0])
         this.y = Number(point.split(':')[1].split('-')[0])
     }
 
@@ -16,18 +16,18 @@ export class Point {
     }
 
     public incrementX(steps ?: number) {
-        return this.x = steps ? this.x + steps : this.x +1;
+        return this.x = steps ? this.x + steps : this.x + 1
     }
 
     public decrementX(steps ?: number) {
-        return this.x = steps ? this.x - steps : this.x - 1;
+        return this.x = steps ? this.x - steps : this.x - 1
     }
-    
+
     public incrementY(steps ?: number) {
-        return this.y = steps ? this.y + steps : this.y +1;
+        return this.y = steps ? this.y + steps : this.y + 1
     }
-    
+
     public decrementY(steps ?: number) {
-        return this.y = steps ? this.y - steps : this.y - 1;
+        return this.y = steps ? this.y - steps : this.y - 1
     }
 }
